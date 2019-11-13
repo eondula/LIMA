@@ -1,0 +1,23 @@
+doctype html
+head
+    style.
+        #map {
+            width: 100%;
+            height: 400px;
+            background-color: grey;
+        }
+h3 LIMA
+// The div element for the map
+#map
+script.
+    // Initialize and add the map
+    function initMap() {
+        // The location of Uluru
+        var gateway = {lat: 34.0303114,lng: -118.281317};
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 20, center: gateway});
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({position: gateway, map: map});
+    }
+script(async='' defer='' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyArgwxaQ5MioKvMTxOK8gCz2wld8t9Ggz4&callback=initMap')
